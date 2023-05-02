@@ -21,19 +21,19 @@ const routes = [
         props: {icon: 'mdi-home'},
       },
       {
-        path: '#about-me',
+        path: 'about-me',
         name: 'About Me',
         component: 'AboutMe',
         props: {icon: 'mdi-account-cowboy-hat'},
       },
       {
-        path: '#portfolio',
+        path: 'portfolio',
         name: 'Portfolio',
         component: 'Portfolio',
         props: {icon: 'mdi-briefcase'},
       },
       {
-        path: '#contact',
+        path: 'contact',
         name: 'Contact',
         component: 'Contact',
         props: {icon: 'mdi-email'},
@@ -45,20 +45,20 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: 'smooth'
-      }
-    } else{
-      return {
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      }
-    }
-  }
+  // scrollBehavior(to, from, savedPosition) {
+  //   if (to.hash) {
+  //     return {
+  //       el: to.hash,
+  //       behavior: 'smooth'
+  //     }
+  //   } else{
+  //     return {
+  //       top: 0,
+  //       left: 0,
+  //       behavior: 'smooth'
+  //     }
+  //   }
+  // }
 
 })
 
